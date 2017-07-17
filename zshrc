@@ -5,12 +5,17 @@
 export ZSH=/Users/soulomoon/.oh-my-zsh
 export http_proxy='http://127.0.0.1:1080'
 export https_proxy='http://127.0.0.1:1080'
- 
+export TERM="xterm-256color" 
+
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status root_indicator background_jobs history time)
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -53,7 +58,7 @@ ZSH_CUSTOM=~/.oh-my-zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git, pyenv, pip, yarn, zsh-syntax-highlighting)
+plugins=(vi-mode, git, pyenv, pip, yarn, django, zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,6 +93,8 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias vjp="ssh vjp"
  alias fastpush="git add -A; git commit -m "fast push"; git pull; git push"
+ 
+
  KEYTIMEOUT=1
  proxy() {
     export http_proxy='http://127.0.0.1:1080'
@@ -106,6 +113,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 eval $(thefuck --alias)
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PATH=$PATH:$HOME/bin
 alias cat=ccat
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
@@ -116,4 +124,4 @@ prompt_context(){
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
     POWERLEVEL9K_COLOR_SCHEME='dark'
     DEFAULT_USER="soulomoon"
-} 
+}

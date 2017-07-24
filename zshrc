@@ -3,9 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/soulomoon/.oh-my-zsh
-export http_proxy='http://127.0.0.1:1080'
-export https_proxy='http://127.0.0.1:1080'
-export TERM="xterm-256color" 
+export TERM="xterm-256color"
 
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -93,9 +91,9 @@ source $ZSH/oh-my-zsh.sh
  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias vjp="ssh vjp"
  alias fastpush="git add -A; git commit -m "fast push"; git pull; git push"
- 
 
- KEYTIMEOUT=1
+
+ # KEYTIMEOUT=1
  proxy() {
     export http_proxy='http://127.0.0.1:1080'
     export https_proxy='http://127.0.0.1:1080'
@@ -104,11 +102,11 @@ source $ZSH/oh-my-zsh.sh
     export http_proxy=''
     export https_proxy=''
  }
- 
+
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # export PYENV_VIRTUALENV_DISABLE_PROMPT=1
- 
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 eval $(thefuck --alias)
@@ -119,9 +117,19 @@ alias cat=ccat
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 prompt_context(){
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+    POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
     POWERLEVEL9K_SHORTEN_DELIMITER=""
     POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
     POWERLEVEL9K_COLOR_SCHEME='dark'
     DEFAULT_USER="soulomoon"
 }
+
+# remove duplicate for fzf
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP

@@ -1,12 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/soulomoon/.oh-my-zsh
-#export http_proxy='http://127.0.0.1:1080'
-#export https_proxy='http://127.0.0.1:1080'
+export http_proxy='http://127.0.0.1:1080'
+export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
-
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -58,7 +57,24 @@ ZSH_CUSTOM=~/.oh-my-zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(web-search tmux tmuxinator zsh-autosuggestions brew vi-mode git pyenv pip yarn django zsh-syntax-highlighting)
+plugins=(
+autojump
+httpie
+common-aliases
+web-search
+tmux
+tmuxinator
+#zsh-autosuggestions
+brew
+#vi-mode
+git
+#pyenv
+pip
+yarn
+django
+zsh-syntax-highlighting
+)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -110,13 +126,14 @@ eval "$(pyenv virtualenv-init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-eval $(thefuck --alias)
-export PATH="/usr/local/opt/openssl/bin:$PATH"
-export PATH=$PATH:$HOME/bin
+#eval $(thefuck --alias)
+#export PATH="/usr/local/opt/openssl/bin:$PATH"
+#export PATH=$PATH:$HOME/bin
 alias cat=ccat
 alias mux=tmuxinator
+# fixing slow zsh
+#alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 prompt_context(){
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=1

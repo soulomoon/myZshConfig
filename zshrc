@@ -14,7 +14,7 @@ export TERM="xterm-256color"
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -136,12 +136,12 @@ alias cat=ccat
 alias mux=tmuxinator
 # fixing slow zsh
 #alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
-prompt_context(){
-    POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-    POWERLEVEL9K_SHORTEN_DELIMITER=""
-    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-    POWERLEVEL9K_COLOR_SCHEME='dark'
-    DEFAULT_USER="soulomoon"
-}
+#prompt_context(){
+#    POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+#    POWERLEVEL9K_SHORTEN_DELIMITER=""
+#    POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+#    POWERLEVEL9K_COLOR_SCHEME='dark'
+#    DEFAULT_USER="soulomoon"
+#}
 export EDITOR='vim'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

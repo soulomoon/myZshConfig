@@ -10,11 +10,12 @@ export TERM="xterm-256color"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#ZSH_THEME="spaceship"
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode context dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode status root_indicator background_jobs history time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -69,6 +70,8 @@ brew
 #vi-mode
 git
 #pyenv
+virtualenv
+zsh-nvm
 pip
 yarn
 django
@@ -122,19 +125,17 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#eval $(thefuck --alias)
+eval $(thefuck --alias)
 #export PATH="/usr/local/opt/openssl/bin:$PATH"
 #export PATH=$PATH:$HOME/bin
 alias cat=ccat
 alias mux=tmuxinator
 # fixing slow zsh
 #alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 prompt_context(){
     POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
     POWERLEVEL9K_SHORTEN_DELIMITER=""
@@ -143,3 +144,4 @@ prompt_context(){
     DEFAULT_USER="soulomoon"
 }
 export EDITOR='vim'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

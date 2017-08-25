@@ -16,8 +16,8 @@ plugins=(
 httpie
 common-aliases
 web-search
-tmux
-tmuxinator
+#tmux
+#tmuxinator
 fasd
 brew
 git
@@ -36,23 +36,22 @@ source $ZSH/oh-my-zsh.sh
  alias zshconfig="mate ~/.oh-my-zsh-custom/zshrc"
  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias vjp="ssh vjp"
- alias fastpush="git add -A; git commit -m "fast push"; git pull; git push"
+ alias fp="git add -A; git commit -m "fast push"; git pull; git push"
  alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
  proxy() {
     export http_proxy='http://127.0.0.1:1080'
     export https_proxy='http://127.0.0.1:1080'
  }
- unproxy() {
+ uproxy() {
     export http_proxy=''
     export https_proxy=''
  }
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 eval $(thefuck --alias)
 alias cat=ccat

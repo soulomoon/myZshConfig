@@ -32,11 +32,12 @@ zsh-syntax-highlighting
 source $ZSH/oh-my-zsh.sh
 
  alias mate=vim
+ alias j=z
  alias zshconfig="mate ~/.oh-my-zsh-custom/zshrc"
  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias vjp="ssh vjp"
  alias fastpush="git add -A; git commit -m "fast push"; git pull; git push"
-
+ alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
  proxy() {
     export http_proxy='http://127.0.0.1:1080'
@@ -56,8 +57,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval $(thefuck --alias)
 alias cat=ccat
 alias mux=tmuxinator
-# fixing slow zsh
-alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
 export EDITOR='vim'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

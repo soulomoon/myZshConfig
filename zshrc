@@ -27,6 +27,7 @@ virtualenv
 pip
 yarn
 django
+zsh_reload
 zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
@@ -36,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
  alias zshconfig="mate ~/.oh-my-zsh-custom/zshrc"
  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias vjp="ssh vjp"
- alias fp="git add -A; git commit -m "fast push"; git pull; git push"
+ alias fp="git add -A; git commit -m 'fast push'; git pull; git push"
  alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 
  proxy() {

@@ -1,8 +1,10 @@
 export PATH=$HOME/bin:$PATH
+export PATH=~/root/bin:$PATH
 export ZSH=/Users/soulomoon/.oh-my-zsh
 export http_proxy='http://127.0.0.1:1080'
 export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
+alias gcc=gcc-7
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv dir vcs)
@@ -28,6 +30,9 @@ pip
 yarn
 django
 zsh_reload
+colored-man-pages
+flask
+zsh-dircolors-solarized
 zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
@@ -61,4 +66,8 @@ alias mux=tmuxinator
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 export EDITOR='vim'
+go_libs="-lm"
+go_flags="-g -Wall -include ~/root/allheads.h -O3"
+alias go_c="gcc -xc '-' $go_libs $go_flags"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

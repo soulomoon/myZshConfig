@@ -63,10 +63,10 @@ alias mux=tmuxinator
 alias ls='gls --color=auto'
 alias lc='colorls'
 alias tmuxreload="tmux source-file $HOME/.tmux.conf"
-alias zshreload="zsh_reload"
 alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
 alias vimconfig="vim $HOME/.vim/myplugin/vim-plug.vim"
 alias ta="tmux attach"
+alias geminit='eval "$(rbenv init -)"'
 
 proxy() {
 	export http_proxy='http://127.0.0.1:1080'
@@ -76,6 +76,7 @@ unproxy() {
 	export http_proxy=''
 	export https_proxy=''
 }
+
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"

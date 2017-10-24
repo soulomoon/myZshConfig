@@ -66,7 +66,6 @@ alias tmuxreload="tmux source-file $HOME/.tmux.conf"
 alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
 alias vimconfig="vim $HOME/.vim/myplugin/vim-plug.vim"
 alias ta="tmux attach"
-alias geminit='eval "$(rbenv init -)"'
 
 proxy() {
 	export http_proxy='http://127.0.0.1:1080'
@@ -78,6 +77,7 @@ unproxy() {
 }
 
 
+eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(gdircolors $HOME/.dircolors-solarized)"

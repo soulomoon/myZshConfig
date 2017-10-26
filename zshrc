@@ -1,3 +1,5 @@
+#prevent accitently overwritting
+set -o noclobber
 export PATH=$HOME/root/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -8,6 +10,9 @@ export http_proxy='http://127.0.0.1:1080'
 export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
 
+
+#ZSH_THEME="agnoster"
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(pyenv dir vcs)

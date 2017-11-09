@@ -52,6 +52,8 @@ export EDITOR='vim'
 
 setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
+export HISTSIZE=100000
+export SAVEHIST=100000
 
 go_libs="-lm"
 go_flags="-g -Wall -include $HOME/root/allheads.h -O3"

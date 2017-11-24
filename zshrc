@@ -6,9 +6,10 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
-export http_proxy='http://127.0.0.1:1080'
-export https_proxy='http://127.0.0.1:1080'
+#export http_proxy='http://127.0.0.1:1080'
+#export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
+export NVM_DIR="$HOME/.nvm"
 
 
 #ZSH_THEME="agnoster"
@@ -33,15 +34,15 @@ web-search
 fasd
 brew
 git
-#pyenv
 virtualenv
-#zsh-nvm
+nvm
 pip
 yarn
 django
 zsh_reload
 colored-man-pages
 flask
+tldr
 #zsh-dircolors-solarized
 zsh-syntax-highlighting
 )
@@ -64,8 +65,8 @@ alias j=z
 alias zshconfig="mate $HOME/.oh-my-zsh-custom/zshrc"
 alias ohmyzsh="mate $HOME/.oh-my-zsh"
 alias vjp="ssh vjp"
-alias fp="git add -A; git commit -m 'fast push at $(date)'; git pull; git push"
-alias loadnvm="./usr/local/opt/nvm/nvm.sh"
+#alias fp="git add -A; git commit -m 'fast push at $(date)'; git pull; git push"
+alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 alias cat=ccat
 alias mux=tmuxinator
 alias ls='gls --color=auto'
@@ -74,7 +75,20 @@ alias tmuxreload="tmux source-file $HOME/.tmux.conf"
 alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
 alias vimconfig="vim $HOME/.vim/myplugin/vim-plug.vim"
 alias ta="tmux attach"
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/dist \
+--userconfig=$HOME/.cnpmrc"
 
+fp() {
+	git add -A;
+	if [ -n "$1" ];
+	then git commit -m $1;
+	else git commit -m "This is fast push";
+	fi
+	git pull;
+	git push;
+}
 proxy() {
 	export http_proxy='http://127.0.0.1:1080'
 	export https_proxy='http://127.0.0.1:1080'

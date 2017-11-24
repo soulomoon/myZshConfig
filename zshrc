@@ -84,7 +84,8 @@ fp() {
 	git add -A;
 	if [ -n "$1" ];
 	then git commit -m $1;
-	else git commit -m "This is fast push";
+	else echo "-------------You did not input a commit, set to default.----------";
+		git commit -m "This is fast push";
 	fi
 	git pull;
 	git push;

@@ -103,6 +103,13 @@ sproxy() {
 	export https_proxy=socks5://127.0.0.1:1081
 }
 
+linkwork() {
+	source ~/.oh-my-zsh-custom/work/work.zsh
+}
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
+
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"

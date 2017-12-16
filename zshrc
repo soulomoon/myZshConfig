@@ -5,6 +5,7 @@ export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/home/fengweiyao/.pyenv/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 #export http_proxy='http://127.0.0.1:1080'
 #export https_proxy='http://127.0.0.1:1080'
@@ -32,7 +33,6 @@ web-search
 #tmux
 #tmuxinator
 fasd
-brew
 git
 virtualenv
 nvm
@@ -69,7 +69,7 @@ alias vjp="ssh vjp"
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 alias cat=ccat
 alias mux=tmuxinator
-alias ls='gls --color=auto'
+alias ls='ls --color=auto'
 alias lc='colorls'
 alias tmuxreload="tmux source-file $HOME/.tmux.conf"
 alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
@@ -114,7 +114,7 @@ source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-eval "$(gdircolors $HOME/.dircolors-solarized)"
+#eval "$(dircolors $HOME/.dircolors-solarized)"
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval $(thefuck --alias)
 

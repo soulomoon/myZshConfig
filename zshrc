@@ -93,10 +93,16 @@ fp() {
 proxy() {
 	export http_proxy='http://127.0.0.1:1080'
 	export https_proxy='http://127.0.0.1:1080'
+	
+
 }
 unproxy() {
 	export http_proxy=''
 	export https_proxy=''
+	export LL_PROXY=''
+	export ftp_proxy=''
+	export socks_proxy=''
+	export all_proxy=''
 }
 sproxy() {
 	export http_proxy=socks5://127.0.0.1:1081

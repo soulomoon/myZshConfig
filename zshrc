@@ -103,6 +103,7 @@ unproxy() {
 	export ftp_proxy=''
 	export socks_proxy=''
 	export all_proxy=''
+	export ALL_PROXY=''
 }
 sproxy() {
 	export http_proxy=socks5://127.0.0.1:1081

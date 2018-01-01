@@ -21,7 +21,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_COLOR_SCHEME=$BACKGROUND
+POWERLEVEL9K_COLOR_SCHEME="dark"
 POWERLEVEL9K_PYTHON_ICON='\U1F40D' # for the snake I like
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
@@ -76,6 +76,7 @@ alias tmuxreload="tmux source-file $HOME/.tmux.conf"
 alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
 alias vimconfig="vim $HOME/.vim/myplugin/vim-plug.vim"
 alias ta="tmux attach"
+alias respawn="tmux respawn-pane -k"
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/dist \
@@ -120,13 +121,11 @@ scrn_prof() {
 light() {
 	export BACKGROUND=light
     it2prof $BACKGROUND
-    src
 }
 
 dark() {
 	export BACKGROUND=dark
     it2prof $BACKGROUND
-    src
 }
 
 

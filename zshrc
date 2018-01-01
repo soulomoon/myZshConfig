@@ -21,7 +21,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_COLOR_SCHEME='dark'
+POWERLEVEL9K_COLOR_SCHEME=$BACKGROUND
 POWERLEVEL9K_PYTHON_ICON='\U1F40D' # for the snake I like
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
@@ -58,6 +58,7 @@ export SAVEHIST=100000
 
 go_libs="-lm"
 go_flags="-g -Wall -include $HOME/root/allheads.h -O3"
+alias reload!='RELOAD=1 source ~/.zshrc'
 alias go_c="cc99 -xc '-' $go_libs $go_flags"
 alias gcc=gcc-7
 alias mate=vim
@@ -103,9 +104,32 @@ sproxy() {
 	export https_proxy=socks5://127.0.0.1:1081
 }
 
-linkwork() {
-	source ~/.oh-my-zsh-custom/work/work.zsh
+it2prof() {
+  if [ -n "$TMUX" ]; then
+    scrn_prof "$1"
+  else
+    # send escape sequence to change iTerm2 profile
+    echo -e "\033]50;SetProfile=$1\007"
+  fi
 }
+
+scrn_prof() {
+    echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
+}
+
+light() {
+	export BACKGROUND=light
+    it2prof $BACKGROUND
+    src
+}
+
+dark() {
+	export BACKGROUND=dark
+    it2prof $BACKGROUND
+    src
+}
+
+
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 source ~/.oh-my-zsh-custom/rabbitmq_complete.bash

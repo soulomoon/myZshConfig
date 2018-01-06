@@ -55,6 +55,7 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=100000
 export SAVEHIST=100000
+export BACKGROUND=dark
 
 go_libs="-lm"
 go_flags="-g -Wall -include $HOME/root/allheads.h -O3"
@@ -82,52 +83,7 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --disturl=https://npm.taobao.org/dist \
 --userconfig=$HOME/.cnpmrc"
 
-fp() {
-	git add -A;
-	if [ -n "$1" ];
-	then git commit -m $1;
-	else echo "-------------You did not input a commit, set to default.----------";
-		git commit -m "This is fast push";
-	fi
-	git pull;
-	git push;
-}
-proxy() {
-	export http_proxy='http://127.0.0.1:1080'
-	export https_proxy='http://127.0.0.1:1080'
-}
-unproxy() {
-	export http_proxy=''
-	export https_proxy=''
-}
-sproxy() {
-	export http_proxy=socks5://127.0.0.1:1081
-	export https_proxy=socks5://127.0.0.1:1081
-}
-
-it2prof() {
-  if [ -n "$TMUX" ]; then
-    scrn_prof "$1"
-  else
-    # send escape sequence to change iTerm2 profile
-    echo -e "\033]50;SetProfile=$1\007"
-  fi
-}
-
-scrn_prof() {
-    echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
-}
-
-light() {
-	export BACKGROUND=light
-    it2prof $BACKGROUND
-}
-
-dark() {
-	export BACKGROUND=dark
-    it2prof $BACKGROUND
-}
-
+source ~/.oh-my-zsh-custom/function.zsh
 
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit

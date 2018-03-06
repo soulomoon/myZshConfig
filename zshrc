@@ -13,8 +13,10 @@ export TERM="xterm-256color"
 export NVM_DIR="$HOME/.nvm"
 
 
-#ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="spaceship"
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)

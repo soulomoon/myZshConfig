@@ -1,5 +1,5 @@
 #pyenv completion
-source /usr/local/share/zsh/site-functions/pyenv.zsh
+#source /usr/local/share/zsh/site-functions/pyenv.zsh
 # pip zsh completion start
 function _pip_completion {
   local words cword

@@ -34,6 +34,7 @@ common-aliases
 #tmux
 #tmuxinator
 #pyenv
+docker
 fasd
 brew
 git

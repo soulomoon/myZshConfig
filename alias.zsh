@@ -5,7 +5,7 @@ alias reload!='RELOAD=1 source ~/.zshrc'
 go_libs="-lm"
 go_flags="-g -Wall -include $HOME/root/allheads.h -O3"
 alias go_c="cc99 -xc '-' $go_libs $go_flags"
-alias gcc=gcc-7
+# alias gcc=gcc-7
 alias mate=vim
 alias j=z
 alias zshconfig="mate $HOME/.oh-my-zsh-custom/zshrc"

@@ -39,7 +39,7 @@ docker
 fasd
 brew
 git
-virtualenv
+# virtualenv
 #nvm
 #pip
 #yarn

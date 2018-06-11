@@ -1,5 +1,6 @@
 #prevent accitently overwritting
 set -o noclobber
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/root/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -16,10 +17,10 @@ export NVM_DIR="$HOME/.nvm"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_THEME="spaceship"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ON_NEWLINE=false
 POWERLEVEL9K_MODE='awesome-fontconfig'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(load status root_indicator background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=""

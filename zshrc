@@ -18,14 +18,14 @@ export NVM_DIR="$HOME/.nvm"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_THEME="spaceship"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=false
-POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_COLOR_SCHEME="dark"
-POWERLEVEL9K_PYTHON_ICON='\U1F40D' # for the snake I like
+#POWERLEVEL9K_PYTHON_ICON='\U1F40D' # for the snake I like
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 plugins=(

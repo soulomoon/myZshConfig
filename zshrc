@@ -29,23 +29,23 @@ POWERLEVEL9K_COLOR_SCHEME="dark"
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 plugins=(
-httpie
+#httpie
 common-aliases
 #web-search
 #tmux
 #tmuxinator
 #pyenv
-docker
+# docker
 fasd
 brew
-git
+#git
 # virtualenv
 #nvm
 #pip
 #yarn
 #django
 zsh_reload
-colored-man-pages
+#colored-man-pages
 #flask
 tldr
 #zsh-dircolors-solarized
@@ -69,14 +69,14 @@ source ~/.oh-my-zsh-custom/function.zsh
 
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
-source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
-source ~/.oh-my-zsh-custom/completion.zsh
+#source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
+#source ~/.oh-my-zsh-custom/completion.zsh
 
 
 #eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-eval "$(gdircolors $HOME/.dircolors-solarized)"
+#eval "$(gdircolors $HOME/.dircolors-solarized)"
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval $(thefuck --alias)
 

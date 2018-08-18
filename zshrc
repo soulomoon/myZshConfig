@@ -38,6 +38,7 @@ common-aliases
 # docker
 fasd
 brew
+stack
 #git
 # virtualenv
 #nvm

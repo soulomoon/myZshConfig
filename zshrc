@@ -38,7 +38,7 @@ common-aliases
 # docker
 fasd
 brew
-stack
+#stack
 #git
 # virtualenv
 #nvm
@@ -68,10 +68,6 @@ export BACKGROUND=dark
 source ~/.oh-my-zsh-custom/alias.zsh
 source ~/.oh-my-zsh-custom/function.zsh
 
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
-#source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
-#source ~/.oh-my-zsh-custom/completion.zsh
 
 
 #eval "$(rbenv init -)"
@@ -82,6 +78,14 @@ eval "$(pyenv virtualenv-init -)"
 eval $(thefuck --alias)
 
 echo "hello"
+
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
+#source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
+#source ~/.oh-my-zsh-custom/completion.zsh
+
+
 #rmove dup
 typeset -U PATH 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

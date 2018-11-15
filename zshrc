@@ -36,9 +36,9 @@ common-aliases
 #tmuxinator
 #pyenv
 # docker
-fasd
+# fasd
 brew
-#stack
+stack
 #git
 # virtualenv
 #nvm
@@ -50,6 +50,7 @@ zsh_reload
 #flask
 tldr
 #zsh-dircolors-solarized
+zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 )
@@ -67,25 +68,16 @@ export BACKGROUND=dark
 
 source ~/.oh-my-zsh-custom/alias.zsh
 source ~/.oh-my-zsh-custom/function.zsh
+source ~/.oh-my-zsh-custom/completion.zsh
 
-
-
-#eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-#eval "$(gdircolors $HOME/.dircolors-solarized)"
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval $(thefuck --alias)
 
 echo "hello"
-
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
-eval "$(stack --bash-completion-script stack)"
-#source ~/.oh-my-zsh-custom/rabbitmq_complete.bash
-#source ~/.oh-my-zsh-custom/completion.zsh
-
-
+. /usr/local/etc/profile.d/z.sh
 #rmove dup
 typeset -U PATH 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+proxy

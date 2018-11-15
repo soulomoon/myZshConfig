@@ -1,6 +1,6 @@
-alias pycharm="open -a pycharm"
-alias python2="/usr/bin/python"
-alias python3="/usr/local/bin/python3"
+# alias pycharm="open -a pycharm"
+# alias python2="/usr/bin/python"
+# alias python3="/usr/local/bin/python3"
 alias reload!='RELOAD=1 source ~/.zshrc'
 go_libs="-lm"
 go_flags="-g -Wall -include $HOME/root/allheads.h -O3"
@@ -15,8 +15,8 @@ alias vjp="ssh vjp"
 alias loadnvm=". /usr/local/opt/nvm/nvm.sh"
 alias cat=ccat
 alias mux=tmuxinator
-alias ls='gls --color=auto'
-alias lc='colorls'
+# alias ls='gls --color=auto'
+# alias lc='colorls'
 alias tmuxreload="tmux source-file $HOME/.tmux.conf"
 alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
 alias vimconfig="vim $HOME/.vim/myplugin/vim-plug.vim"

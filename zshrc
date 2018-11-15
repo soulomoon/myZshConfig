@@ -12,6 +12,8 @@ export ZSH=$HOME/.oh-my-zsh
 #export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
 export NVM_DIR="$HOME/.nvm"
+#export PATH="$HOME/.cabal/bin:$PATH"
+
 
 
 # ZSH_THEME="robbyrussell"

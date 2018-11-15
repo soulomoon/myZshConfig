@@ -39,3 +39,8 @@ dark() {
 	export BACKGROUND=dark
     it2prof $BACKGROUND
 }
+prepend_to_path () {
+  path[1,0]=$1
+  typeset -U path
+}
+

@@ -36,7 +36,7 @@ common-aliases
 #web-search
 #tmux
 #tmuxinator
-#pyenv
+pyenv
 # docker
 # fasd
 brew

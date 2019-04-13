@@ -36,7 +36,10 @@ common-aliases
 #web-search
 #tmux
 #tmuxinator
+yarn
+docker
 pyenv
+docker-machine
 # docker
 # fasd
 brew
@@ -46,14 +49,12 @@ stack
 #nvm
 #pip
 #yarn
-#django
+django
 zsh_reload
 #colored-man-pages
 #flask
-tldr
 #zsh-dircolors-solarized
 zsh-autosuggestions
-zsh-completions
 zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh

@@ -17,9 +17,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-# ZSH_THEME="spaceship"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="spaceship"
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
@@ -30,15 +30,21 @@ POWERLEVEL9K_COLOR_SCHEME="dark"
 #POWERLEVEL9K_PYTHON_ICON='\U1F40D' # for the snake I like
 
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
+
+source ~/.oh-my-zsh-custom/alias.zsh
+source ~/.oh-my-zsh-custom/function.zsh
+source ~/.oh-my-zsh-custom/completion.zsh
 plugins=(
 #httpie
 common-aliases
 #web-search
 #tmux
 #tmuxinator
+# ripgrep
 yarn
-docker
 pyenv
+docker
+docker-compose
 docker-machine
 # docker
 # fasd
@@ -54,10 +60,13 @@ zsh_reload
 #colored-man-pages
 #flask
 #zsh-dircolors-solarized
+ripgrep
 zsh-autosuggestions
+zsh-completions
 zsh-syntax-highlighting
 )
-source $ZSH/oh-my-zsh.sh
+
+
 
 export EDITOR='vim'
 #export CLICOLOR=1
@@ -69,9 +78,6 @@ export SAVEHIST=100000
 export BACKGROUND=dark
 
 
-source ~/.oh-my-zsh-custom/alias.zsh
-source ~/.oh-my-zsh-custom/function.zsh
-source ~/.oh-my-zsh-custom/completion.zsh
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
@@ -84,3 +90,5 @@ typeset -U PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 proxy
+source $ZSH/oh-my-zsh.sh
+autoload -U compinit && compinit

@@ -8,6 +8,7 @@ export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
+# export PATH_TO_FX=$Home/lib/javafx-sdk-12.0.2/lib
 #export http_proxy='http://127.0.0.1:1080'
 #export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
@@ -34,8 +35,10 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 source ~/.oh-my-zsh-custom/alias.zsh
 source ~/.oh-my-zsh-custom/function.zsh
 source ~/.oh-my-zsh-custom/completion.zsh
+source ~/.oh-my-zsh-custom/spaceshipconfig.zsh
 plugins=(
 #httpie
+fasd
 common-aliases
 #web-search
 #tmux
@@ -61,6 +64,7 @@ zsh_reload
 #flask
 #zsh-dircolors-solarized
 ripgrep
+# exa
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
@@ -76,15 +80,14 @@ setopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=100000
 export SAVEHIST=100000
 export BACKGROUND=dark
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 
 
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 eval $(thefuck --alias)
-
 echo "hello"
-. /usr/local/etc/profile.d/z.sh
 #rmove dup
 typeset -U PATH 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -92,3 +95,5 @@ typeset -U PATH
 proxy
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
+
+source /Users/soulomoon/.nix-profile/etc/profile.d/nix.sh

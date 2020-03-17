@@ -9,12 +9,16 @@ fp() {
 	git push;
 }
 proxy() {
-	export http_proxy='http://127.0.0.1:1080'
-	export https_proxy='http://127.0.0.1:1080'
+  export https_proxy='http://127.0.0.1:1080'
+  export http_proxy='http://127.0.0.1:1080'  
+  export all_proxy='socks5://127.0.0.1:1086'
 }
+
+
 unproxy() {
 	export http_proxy=''
 	export https_proxy=''
+  export all_proxy=''
 }
 
 it2prof() {

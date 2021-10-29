@@ -25,10 +25,6 @@ alias tmuxconfig="vim $HOME/.tmux/.tmux.conf"
 alias vimconfig="vim $HOME/.vim/myplugin/vim-plug.vim"
 alias ta="tmux attach"
 alias respawn="tmux respawn-pane -k -c '#{pane_current_path}'"
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
---cache=$HOME/.npm/.cache/cnpm \
---disturl=https://npm.taobao.org/dist \
---userconfig=$HOME/.cnpmrc"
 alias runghc="stack runghc"
 alias ghcrepl="stack exec -- ghci-color"
 alias updatevim="vim -c 'PlugUpgrade' -c 'PlugUpdate' -c 'qa!'"

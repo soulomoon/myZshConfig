@@ -22,8 +22,9 @@ source $ZSH_CUSTOM/spaceshipconfig.zsh
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 ### Fix slowness of pastes
 
-# workaround for alow application completetion
+# workaround for slow application completetion
 zstyle :completion::complete:open:option-a-1: application-path /Applications
+# workaround 
 
 ZSH_THEME="spaceship"
 plugins=(

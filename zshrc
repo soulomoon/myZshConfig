@@ -7,8 +7,8 @@ export PATH="/usr/local/sbin:$PATH"
 #export http_proxy='http://127.0.0.1:1080'
 #export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/root/bin:$PATH
+# export PATH=$HOME/.local/bin:$PATH
+# export PATH=$HOME/root/bin:$PATH
 export PATH=$HOME/bin:$PATH
 # export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
@@ -17,6 +17,11 @@ source $ZSH_CUSTOM/alias.zsh
 source $ZSH_CUSTOM/function.zsh
 source $ZSH_CUSTOM/completion.zsh
 source $ZSH_CUSTOM/spaceshipconfig.zsh
+
+### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+### Fix slowness of pastes
+
 # workaround for alow application completetion
 zstyle :completion::complete:open:option-a-1: application-path /Applications
 

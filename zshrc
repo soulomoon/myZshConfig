@@ -1,33 +1,32 @@
 #prevent accitently overwritting
 set -o noclobber
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/root/bin:$PATH
-export PATH=$HOME/bin:$PATH
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export ZSH=$HOME/.oh-my-zsh
+# export PATH="/usr/local/opt/sqlite/bin:$PATH"
 #export http_proxy='http://127.0.0.1:1080'
 #export https_proxy='http://127.0.0.1:1080'
 export TERM="xterm-256color"
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/root/bin:$PATH
+export PATH=$HOME/bin:$PATH
+# export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
+source $ZSH_CUSTOM/alias.zsh
+source $ZSH_CUSTOM/function.zsh
+source $ZSH_CUSTOM/completion.zsh
+source $ZSH_CUSTOM/spaceshipconfig.zsh
 
 ZSH_THEME="spaceship"
-
-ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
-
-source ~/.oh-my-zsh-custom/alias.zsh
-source ~/.oh-my-zsh-custom/function.zsh
-source ~/.oh-my-zsh-custom/completion.zsh
-source ~/.oh-my-zsh-custom/spaceshipconfig.zsh
 plugins=(
+fasd
 common-aliases
 brew
 zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting
 )
-
 
 
 export EDITOR='vim'

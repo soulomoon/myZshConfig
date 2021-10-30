@@ -17,9 +17,12 @@ source $ZSH_CUSTOM/alias.zsh
 source $ZSH_CUSTOM/function.zsh
 source $ZSH_CUSTOM/completion.zsh
 source $ZSH_CUSTOM/spaceshipconfig.zsh
+# workaround for alow application completetion
+zstyle :completion::complete:open:option-a-1: application-path /Applications
 
 ZSH_THEME="spaceship"
 plugins=(
+git
 fasd
 common-aliases
 brew

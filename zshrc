@@ -1,6 +1,7 @@
 #prevent accitently overwritting
 set -o noclobber
 # export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 # export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -12,6 +13,7 @@ export TERM="xterm-256color"
 export PATH=$HOME/bin:$PATH
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
+
 source $ZSH_CUSTOM/alias.zsh
 source $ZSH_CUSTOM/function.zsh
 source $ZSH_CUSTOM/completion.zsh

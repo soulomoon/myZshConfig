@@ -1,1 +1,1 @@
-/Users/soulomoon/.oh-my-zsh-custom/themes/spaceship-prompt/spaceship.zsh-theme
+/Users/ares/.oh-my-zsh-custom/themes/spaceship-prompt/spaceship.zsh-theme

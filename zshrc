@@ -10,7 +10,6 @@ export TERM="xterm-256color"
 # export PATH=$HOME/.local/bin:$PATH
 # export PATH=$HOME/root/bin:$PATH
 export PATH=$HOME/bin:$PATH
-# export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 source $ZSH_CUSTOM/alias.zsh
@@ -48,11 +47,10 @@ export BACKGROUND=dark
 # eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
 eval $(thefuck --alias)
-echo "hello"
 #rmove dup
 typeset -U PATH 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 proxy
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
-
+echo "hello"
